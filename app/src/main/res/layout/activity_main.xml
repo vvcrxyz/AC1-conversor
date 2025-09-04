@@ -1,41 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#B0B0B0">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/lblPrueba"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="56dp" />
+        android:text="Selecciona una conversion"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
 
-    <Button
-        android:id="@+id/button2"
+    <EditText
+        android:id="@+id/txtEntrada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Escribe un valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/lblPrueba"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/lblResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="52dp" />
+        android:text="Resultado aqui"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/txtEntrada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnTemperatura"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="131dp" />
+        android:text="Temperatura"
+        app:layout_constraintTop_toBottomOf="@id/lblResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnLongitud"
+        android:layout_margin="8dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnLongitud"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Longitud"
+        app:layout_constraintTop_toBottomOf="@id/lblResultado"
+        app:layout_constraintStart_toEndOf="@id/btnTemperatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/btnPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Peso"
+        app:layout_constraintTop_toBottomOf="@id/btnTemperatura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnVolumen"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/btnVolumen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Volumen"
+        app:layout_constraintTop_toBottomOf="@id/btnLongitud"
+        app:layout_constraintStart_toEndOf="@id/btnPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/btnConvertir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="127dp" />
+        android:text="Convertir"
+        app:layout_constraintTop_toBottomOf="@id/btnVolumen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
